@@ -1,0 +1,15 @@
+# service file /etc/systemd/system/cloudflare-ddns.service
+# sh file /etc/cloudflare-ddns-update.sh
+# change both file owner to root and permission to 755
+# run after add this service systemctl daemon-reload
+
+[Unit]
+Description=Auto update cloudflare ddns
+
+[Service]
+Restart=always
+RestartSec=180s
+ExecStart=/bin/bash /etc/cloudflare-ddns-update.sh
+
+[Install]
+WantedBy=timers.target
