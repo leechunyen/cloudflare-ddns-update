@@ -1,5 +1,5 @@
 # cloudflare-ddns-update
-  This is a script to automatically update dns ipv4 record on CloudFlare
+  This is a script to automatically update dns ipv4 record on CloudFlare every 3 second
 
 # How to get APItoken, zoneID and recordID
   ## APItoken
