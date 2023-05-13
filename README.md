@@ -24,7 +24,7 @@
   ## Linux
   edit cloudflare-ddns-update.sh fill in the APItoken, zoneID and recordID\
   copy cloudflare-ddns-update.sh into /etc/\
-  copy cloudflare-ddns.service into /etc/systemd/system/\
+  copy cloudflare-ddns.service into /etc/systemd/system/
   
   set owner to root
   
