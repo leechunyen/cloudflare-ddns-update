@@ -3,10 +3,10 @@
 
 # How to get APItoken, zoneID and recordID
   ## APItoken
-  Login in into CloudFlare account then goto MyProfile -> API Tokens create Edit zone DNS token
+  Login in to CloudFlare account then go to MyProfile -> API Tokens create Edit zone DNS token
 
   ## zoneID
-  Login in into CloudFlare account select website/domain to use\
+  Login in to CloudFlare account select website/domain to use\
   In the API session at right side Zone ID is there
 
   ## recordID
@@ -26,6 +26,16 @@
   copy cloudflare-ddns-update.sh into /etc/\
   copy cloudflare-ddns.service into /etc/systemd/system/
   
+  install required tools
+    
+  Debian based
+  
+    sudo apt-get install python curl -y
+  
+  Redhat based
+  
+    sudo yum install python curl -y
+  
   set owner to root
   
     sudo chown root:root /etc/cloudflare-ddns-update.sh
@@ -33,8 +43,8 @@
   
   set permission
   
-    sudo chmod 755 /etc/cloudflare-ddns-update.sh
-    sudo chmod 755 /etc/systemd/system/cloudflare-ddns.service
+    sudo chmod +x /etc/cloudflare-ddns-update.sh
+    sudo chmod +x /etc/systemd/system/cloudflare-ddns.service
   
   reload daemon
   
@@ -47,6 +57,17 @@
   start service now
   
     sudo systemctl start cloudflare-ddns
+
+  ## Docker
+  edit cloudflare-ddns-update.sh fill in the APItoken, zoneID and recordID
+  
+  set permission
+  
+    sudo chmod +x install.sh
+  
+  run script
+  
+    sudo ./install.sh
 
 # Support to this project
   donate to me\
