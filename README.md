@@ -72,6 +72,8 @@
   ## OpenWRT
   edit cloudflare-ddns-update.sh fill in the APItoken, zoneID and recordID
 
+  set permission
+  
     chmod +x install.sh
 
    run install script
