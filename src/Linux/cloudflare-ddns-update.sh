@@ -29,8 +29,7 @@ cmdUpdateCurl="curl --request PATCH \
 res=$(eval "$cmdUpdateCurl")
 
 # decode json from respond
-output=$(echo $res | python -c "import 
-json,sys;obj=json.load(sys.stdin);print(obj['success']);")
+output=$(echo $res | python -c "import json,sys;obj=json.load(sys.stdin);print(obj['success']);")
 
 # display final output
 echo "success: $output"
