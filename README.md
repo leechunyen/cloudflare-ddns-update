@@ -32,7 +32,7 @@
   
     sudo apt-get install python curl -y
   
-  Redhat based
+  RHEL based
   
     sudo yum install python curl -y
   
@@ -65,9 +65,18 @@
   
     sudo chmod +x install.sh
   
-  run script
+  run install script
   
     sudo ./install.sh
+
+  ## OpenWRT
+  edit cloudflare-ddns-update.sh fill in the APItoken, zoneID and recordID
+
+    chmod +x install.sh
+
+   run install script
+  
+    ./install.sh
 
 # Support to this project
   donate to me\

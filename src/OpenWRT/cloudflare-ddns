@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=10
+
+start() {
+   echo "Starting Cloudflare DDNS update service..."
+    while true; do
+        nohup /etc/cloudflare-ddns-update.sh >/dev/null 2>&1
+        sleep 180  # 3 minutes
+    done &
+}
+
+stop() {
+    echo "Stopping Cloudflare DDNS update service..."
+    killall cloudflare-ddns-update.sh
+}
