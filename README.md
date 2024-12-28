@@ -80,7 +80,6 @@
   
     ./install.sh
 
-# Support to this project
-  donate to me\
+## Supporting me
   [Donate Link](https://gogetfunding.com/open-source-project-and-library/)\
-  THANK for your support
+  Thank you for your support!
